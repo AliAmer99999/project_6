@@ -1,0 +1,233 @@
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+hr {
+
+    width: 93%;
+    margin: 0 auto;
+    border-color: rgb(255 255 255 / 10%);
+    border-width: 0.5px;
+}
+
+.container {
+
+    width: 300px;
+    background-color: hsl(216, 50%, 16%);
+    padding: 15px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.container .img {
+    position: relative;
+} 
+.container .img img {
+    
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.container .img:hover img {
+
+    mix-blend-mode: luminosity;
+}
+
+.container .img::before {
+    content: "";
+    border-radius: 6px;
+    transition: .6s;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+}
+
+.container .img:hover::before {
+ 
+    content: "";
+    width: 100%;
+    height: 93%;
+    background-color: hsl(178deg 100% 50% / 56%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.container .img:hover::after {
+ 
+    content: "icon";
+    font-size: 1.3rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    left: 42%;
+    top: 42%;
+}
+
+.content .title:hover,
+.content .creator p span:hover
+{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.content .title {
+
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: .5px;
+    font-size: 0.9rem;
+}
+
+.content .description {
+
+    color: #fff;
+    opacity: .5;
+    font-size: .7rem;
+    margin: 10px 0;
+    line-height: 20px;
+    letter-spacing: .6px;
+}
+
+.content .num-tim {
+
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.content .num-tim div {
+
+    display: flex;
+}
+
+.content .num-tim div p {
+
+    margin-left: 7px;
+    font-size: .8rem;
+}
+
+.content .num-tim div:first-of-type p {
+
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+}
+
+.content .num-tim div:last-of-type p {
+
+    color: #fff;
+    opacity: 0.6;
+}
+
+.content .creator {
+
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin: 17px 0 0 17px;
+    justify-content: normal;
+    color: #fff;
+    font-size: .8rem;
+}
+
+.content .creator img {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 16px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.content .creator p {
+
+    color: #ffffff6b;
+}
+
+.content .creator p span {
+
+    color: #ffffffd1;
+    margin-left: 6px;
+}
+
+/*! ========================= Media (325px) ========================= */
+
+@media (max-width:325px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+
+/*? ============================================================================================= */
+
+/* The Water Mark (start) */
+
+.watermark {
+
+    z-index: 9999999;
+    position: absolute;
+    left: 11%;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: context-menu;
+    font-weight: 100;
+    font-family: cursive;
+    opacity: 0.4;
+    bottom: 11%;
+}
+
+.watermark:hover {
+    display: none;
+}
+
+@media (max-width:320px) {
+    .watermark {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:230px) {
+    .watermark {
+        font-size: 1rem;
+    }
+}
+
+/* The Water Mark (end) */
